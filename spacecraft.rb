@@ -38,6 +38,5 @@ end
 rover = Spacecraft.new
 cmd =  ['f', 'r', 'd', 'b', 'r', 'l','u', 'b']
 rover.execute_commands(cmd)
-print(rover.position)
-puts
-puts(rover.direction)
+puts "Final Position: #{rover.position}"
+puts "Final Direction: #{rover.direction}"
