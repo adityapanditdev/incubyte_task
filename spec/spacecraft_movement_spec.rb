@@ -1,3 +1,4 @@
+require_relative '../motion/spacecraft_movement.rb'
 
 RSpec.describe SpacecraftMovement do
   class MovementTest

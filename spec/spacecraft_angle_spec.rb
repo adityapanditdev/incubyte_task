@@ -1,4 +1,4 @@
-require_relative '../direction/spacecraft_angle.rb' 
+require_relative '../motion/spacecraft_angle.rb' 
 
 RSpec.describe SpacecraftAngle do
   let(:dummy_class) { Class.new { include SpacecraftAngle } }
@@ -6,7 +6,7 @@ RSpec.describe SpacecraftAngle do
   describe '#turn_upward' do
     it 'turns upward if direction is not Up or Down' do
       instance = dummy_class.new
-      expect(instance.turn_upward('Left')).to eq(['Up', 'Left'])
+      expect(instance.turn_upward('l')).to eq(['Up', 'l'])
     end
 
     it 'does not change direction if already Up' do
@@ -23,7 +23,7 @@ RSpec.describe SpacecraftAngle do
   describe '#turn_downward' do
     it 'turns downward if direction is not Up or Down' do
       instance = dummy_class.new
-      expect(instance.turn_downward('Left')).to eq(['Down', 'Left'])
+      expect(instance.turn_downward('l')).to eq(['Down', 'l'])
     end
 
     it 'does not change direction if already Up' do
